@@ -12,13 +12,14 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask queEssuelo;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animacion;
+    [SerializeField] private float vida;
     float hInput;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class Player : MonoBehaviour
 
         if (hInput != 0) 
         {
-            anim
+            //anim
         
         }
     }
@@ -66,6 +67,11 @@ public class Player : MonoBehaviour
         Gizmos.DrawSphere(pies.position , radiopies);
     }
 
-
+    public void RecibirDanho(float danho)
+    { 
+        
+        vida -= danho;
+    
+    }
 
 }
